@@ -44,6 +44,9 @@ jobs:
             npx cap add android
           fi
 
+      - name: Prepare Capacitor assets directory
+        run: mkdir -p android/app/src/main/assets
+
       - name: Sync Android
         run: npx cap sync android
 
