@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "NORTHLINE",
+      "hasCanvas": false,
+      "bodyTextLen": 457,
+      "bodyTextHash": "12c17404b4897f9f38888513a7a8773610f0341b287c1717a2ad6a65a6802a41",
+      "bodyTextPrefix": "NORTHLINE US PRIVATE NETWORK WireGuard / Chicago, IL Exposed 50 ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "NORTHLINE",
+      "hasCanvas": false,
+      "bodyTextLen": 461,
+      "bodyTextHash": "482225cd912616e69955d18d127e08682febe7b13b71d4396456a5eb88e83c13",
+      "bodyTextPrefix": "NORTHLINE Exposed Connect Servers Shield Speed Activity Settings",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
