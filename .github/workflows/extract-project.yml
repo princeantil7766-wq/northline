@@ -1,0 +1,39 @@
+name: Extract complete NORTHLINE project
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    if: ${{ !contains(github.event.head_commit.message, '[skip extract]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Extract project archive
+        run: |
+          set -e
+          ARCHIVE="yN2bJmfxqOZ6rFsQ-grok-workspace.zip"
+          test -f "$ARCHIVE"
+          unzip -o "$ARCHIVE" -d .
+          rm -f "$ARCHIVE"
+
+      - name: Commit extracted project
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No extracted changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: restore complete NORTHLINE source [skip extract]"
+          git push origin HEAD:main
